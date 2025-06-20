@@ -6,7 +6,7 @@ export default function SaveData() {
 
   const save = async () => {
     try {
-      await axios.post('http://localhost:4000/save', { text }, {
+      await axios.post('https://node-file-handling-backend.onrender.com/save', { text }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       alert('Saved!');

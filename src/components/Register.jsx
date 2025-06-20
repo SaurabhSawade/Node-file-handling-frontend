@@ -7,7 +7,7 @@ export default function Register() {
 
   const register = async () => {
     try {
-      const res = await axios.post('http://localhost:4000/register', form);
+      const res = await axios.post('https://node-file-handling-backend.onrender.com/register', form);
       alert(res.data.message);
     } catch (err) {
       alert(err.response?.data?.message || 'Error');

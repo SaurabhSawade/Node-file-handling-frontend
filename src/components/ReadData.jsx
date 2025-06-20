@@ -6,7 +6,7 @@ export default function ReadData() {
 
   const read = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/read', {
+      const res = await axios.get('https://node-file-handling-backend.onrender.com/read', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setData(JSON.stringify(res.data, null, 2));

@@ -6,7 +6,7 @@ export default function Login() {
 
   const login = async () => {
     try {
-      const res = await axios.post('http://localhost:4000/login', form);
+      const res = await axios.post('https://node-file-handling-backend.onrender.com/login', form);
       localStorage.setItem('token', res.data.token);
       alert('Login successful');
     } catch (err) {
